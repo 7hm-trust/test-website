@@ -1,89 +1,62 @@
-/* Reset some default styles for consistency */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Body styling */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4; /* Background color for the body */
-  padding-top: 50px; /* Space for the navbar */
-}
-
-/* Navbar styling */
+/* Improved Navbar Styling */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
-  padding: 10px 20px;
-  position: fixed; /* Keeps the navbar at the top */
-  width: 100%; /* Make the navbar full width */
+  background-color: #222; /* Slightly darker shade for a clean look */
+  padding: 15px 40px; /* Increased padding for a professional appearance */
+  position: fixed; 
   top: 0;
   left: 0;
-  z-index: 1000; /* Make sure the navbar stays on top of other elements */
+  width: 100%; 
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .navbar .logo {
-  height: 50px;  /* Adjust logo size */
+  height: 40px;  /* Logo size adjustment */
   width: auto;
 }
 
-nav ul {
+/* Navbar Links */
+.navbar nav ul {
   list-style: none;
   display: flex;
+  gap: 30px; /* Adds equal space between links */
 }
 
-nav ul li {
-  margin-left: 20px;
-}
-
-nav ul li a {
+.navbar nav ul li a {
   text-decoration: none;
-  color: white;
-  font-size: 18px;
-  transition: color 0.3s ease;
+  color: #f4f4f4; /* Clean, white color */
+  font-size: 16px; /* Professional font size */
+  font-weight: 500; /* Medium font weight */
+  letter-spacing: 0.5px; /* Adds slight spacing between letters */
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-nav ul li a:hover {
-  color: #f0a500;  /* Highlight links on hover */
+/* Navbar Hover Effects */
+.navbar nav ul li a:hover {
+  color: #f0a500; /* Highlight link color */
+  transform: translateY(-2px); /* Subtle lift effect */
 }
 
-/* Spacing for content */
-.main-content {
-  padding: 20px;
-  margin-top: 80px; /* Ensure content is not hidden behind navbar */
+/* Active Link Styling */
+.navbar nav ul li a.active {
+  color: #f0a500;
+  border-bottom: 2px solid #f0a500; /* Underline effect for active page */
 }
 
-/* Footer styling */
-.footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  font-size: 14px;
-  margin-top: 20px;
-}
+/* Responsive Navbar for Mobile View */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
 
-.footer p {
-  margin: 10px 0;
-}
-
-/* Footer links style */
-.footer u {
-  text-decoration: underline;  /* Underline Legal Disclaimer and Privacy Policy */
-  color: #f0a500;  /* Color of the underlined links */
-}
-
-.footer u:hover {
-  color: #ff6600;  /* Change color on hover */
-}
-
-/* Prevent underline on the vertical bar separator */
-.separator {
-  text-decoration: none;
-  color: white;  /* Ensure the separator matches the text color */
-  font-size: 18px;
+  .navbar nav ul {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+  }
 }

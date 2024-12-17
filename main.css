@@ -47,9 +47,48 @@ nav ul li a:hover {
 .main-content {
   padding: 20px;
 }
+
 /* Style for the logo image */
 .logo {
   height: 70px;  /* Set height of the logo */
   width: auto;   /* Maintain aspect ratio of the logo */
   border: 1px solid #ccc; /* Optional: add a border around the logo */
+}
+
+/* Footer styles */
+.footer {
+  background-color: #333;  /* Dark background for the footer */
+  color: white;            /* White text color */
+  text-align: center;      /* Center the text */
+  padding: 20px;           /* Padding around the text */
+  font-size: 14px;         /* Smaller text size for footer */
+  margin-top: 20px;        /* Space above the footer */
+}
+
+.footer p {
+  margin: 10px 0;  /* Add margin between paragraphs */
+}
+
+.footer a {
+  text-decoration: underline;   /* Underline links */
+  color: #f0a500;               /* Golden color for the links */
+  transition: color 0.3s ease;   /* Smooth color transition on hover */
+}
+
+.footer a:hover {
+  color: #ff6600;  /* Change color to a darker shade of gold on hover */
+}
+
+/* Optional: Ensure the footer stays at the bottom of the page */
+html, body {
+  height: 100%;   /* Full height for both html and body */
+}
+
+body {
+  display: flex;          /* Use flexbox layout for body */
+  flex-direction: column; /* Align content in a column */
+}
+
+.main-content {
+  flex: 1;  /* Take up remaining space, pushing footer to the bottom */
 }

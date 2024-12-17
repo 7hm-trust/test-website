@@ -17,7 +17,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f0f0f0; /* Lighter grey background for visibility */
+  background-color: #e8e8e8; /* Very light grey for maximum contrast */
   padding: 15px 40px;
   position: fixed;
   top: 0;
@@ -51,7 +51,7 @@ body {
 
 .navbar nav ul li a {
   text-decoration: none;
-  color: #333; /* Dark grey for contrast on light background */
+  color: #333; /* Dark grey for contrast */
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.5px;

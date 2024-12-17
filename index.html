@@ -4,28 +4,137 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yorkdale Partners</title>
-  <link rel="stylesheet" href="css/styles.css"> <!-- Link to your CSS file -->
+  <style>
+    /* Reset some default styles for consistency */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding-top: 70px; /* Space for the fixed navbar */
+    }
+
+    /* Navbar Styling */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #222;
+      padding: 15px 40px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar .logo {
+      height: 40px;
+      width: auto;
+    }
+
+    .navbar nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .navbar nav ul li a {
+      text-decoration: none;
+      color: #f4f4f4;
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .navbar nav ul li a:hover {
+      color: #f0a500;
+      transform: translateY(-2px);
+    }
+
+    .navbar nav ul li a.active {
+      color: #f0a500;
+      border-bottom: 2px solid #f0a500;
+    }
+
+    /* Responsive Navbar for Mobile View */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+      }
+
+      .navbar nav ul {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 10px;
+      }
+    }
+
+    /* Main Content */
+    .main-content {
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    /* Footer Styling */
+    .footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+
+    .footer p {
+      margin: 10px 0;
+    }
+
+    .footer u {
+      text-decoration: underline;
+      color: #f0a500;
+    }
+
+    .footer u:hover {
+      color: #ff6600;
+    }
+
+    .separator {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+    }
+  </style>
 </head>
 <body>
-
   <!-- Top Navbar for Page Links -->
   <div class="navbar">
     <!-- Logo image -->
     <img src="Images/Logo.avif" alt="Yorkdale Partners Logo" class="logo">
     <nav>
       <ul>
-        <li><a href="index.html">Our Firm</a></li>
-        <li><a href="index.html">Solutions</a></li>
-        <li><a href="index.html">Our Team</a></li>
-        <li><a href="Experience.html">Experience</a></li>
-        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="index.html" class="active">Our Firm</a></li>
+        <li><a href="solutions.html">Solutions</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </div>
 
   <!-- Main Content -->
   <div class="main-content">
-    <!-- Your page content goes here -->
+    <h1>Welcome to Yorkdale Partners</h1>
+    <p>This is where your main content will go.</p>
   </div>
 
   <!-- Footer Section -->
@@ -35,6 +144,5 @@
       <u>Legal Disclaimer</u> <span class="separator">|</span> <u>Privacy Policy</u>
     </p>
   </footer>
-
 </body>
 </html>

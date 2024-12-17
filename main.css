@@ -47,3 +47,9 @@ nav ul li a:hover {
 .main-content {
   padding: 20px;
 }
+/* Style for the logo image */
+.logo {
+  height: 70px;  /* Set height of the logo */
+  width: auto;   /* Maintain aspect ratio of the logo */
+  border: 1px solid #ccc; /* Optional: add a border around the logo */
+}

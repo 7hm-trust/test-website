@@ -34,7 +34,18 @@
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
+    .navbar .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px; /* Space between logo image and logo name */
+    }
+
     .navbar .logo {
+      height: 40px;
+      width: auto;
+    }
+
+    .navbar .logo-name {
       height: 40px;
       width: auto;
     }
@@ -77,6 +88,11 @@
         gap: 15px;
         margin-top: 10px;
       }
+
+      .navbar .logo-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
 
     /* Main Content */
@@ -118,15 +134,18 @@
 <body>
   <!-- Top Navbar for Page Links -->
   <div class="navbar">
-    <!-- Logo image -->
-    <img src="Images/Logo.avif" alt="Yorkdale Partners Logo" class="logo">
+    <!-- Logo container with logo image and logo name -->
+    <div class="logo-container">
+      <img src="Images/Logo.avif" alt="Yorkdale Partners Logo" class="logo">
+      <img src="Images/LogoName.avif" alt="Yorkdale Partners Name" class="logo-name">
+    </div>
     <nav>
       <ul>
         <li><a href="index.html" class="active">Our Firm</a></li>
-        <li><a href="solutions.html">Solutions</a></li>
-        <li><a href="team.html">Our Team</a></li>
-        <li><a href="experience.html">Experience</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html">Solutions</a></li>
+        <li><a href="index.html">Our Team</a></li>
+        <li><a href="Experience.html">Experience</a></li>
+        <li><a href="Contact.html">Contact</a></li>
       </ul>
     </nav>
   </div>

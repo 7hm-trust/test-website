@@ -1,49 +1,71 @@
-/* Improved Navbar Styling */
+/* Reset some default styles for consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding-top: 70px; /* Space for the fixed navbar */
+}
+
+/* Navbar Styling */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #222; /* Slightly darker shade for a clean look */
-  padding: 15px 40px; /* Increased padding for a professional appearance */
-  position: fixed; 
+  background-color: #f0f0f0; /* Lighter grey background for visibility */
+  padding: 15px 40px;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%; 
+  width: 100%;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
+.navbar .logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between logo image and logo name */
+}
+
 .navbar .logo {
-  height: 40px;  /* Logo size adjustment */
+  height: 40px;
   width: auto;
 }
 
-/* Navbar Links */
+.navbar .logo-name {
+  height: 40px;
+  width: auto;
+}
+
 .navbar nav ul {
   list-style: none;
   display: flex;
-  gap: 30px; /* Adds equal space between links */
+  gap: 30px;
 }
 
 .navbar nav ul li a {
   text-decoration: none;
-  color: #f4f4f4; /* Clean, white color */
-  font-size: 16px; /* Professional font size */
-  font-weight: 500; /* Medium font weight */
-  letter-spacing: 0.5px; /* Adds slight spacing between letters */
+  color: #333; /* Dark grey for contrast on light background */
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Navbar Hover Effects */
 .navbar nav ul li a:hover {
-  color: #f0a500; /* Highlight link color */
-  transform: translateY(-2px); /* Subtle lift effect */
+  color: #f0a500; /* Highlight color for links on hover */
+  transform: translateY(-2px);
 }
 
-/* Active Link Styling */
 .navbar nav ul li a.active {
   color: #f0a500;
-  border-bottom: 2px solid #f0a500; /* Underline effect for active page */
+  border-bottom: 2px solid #f0a500;
 }
 
 /* Responsive Navbar for Mobile View */
@@ -59,4 +81,44 @@
     gap: 15px;
     margin-top: 10px;
   }
+
+  .navbar .logo-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Main Content */
+.main-content {
+  padding: 20px;
+  margin-top: 30px;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.footer p {
+  margin: 10px 0;
+}
+
+.footer u {
+  text-decoration: underline;
+  color: #f0a500;
+}
+
+.footer u:hover {
+  color: #ff6600;
+}
+
+.separator {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
 }

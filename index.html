@@ -16,7 +16,7 @@
     body {
       font-family: Arial, sans-serif;
       background-color: #f4f4f4;
-      padding-top: 100px; /* Space for the larger fixed navbar */
+      padding-top: 70px; /* Space for the fixed navbar */
     }
 
     /* Navbar Styling */
@@ -24,34 +24,32 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: #f8f8f8; /* Light grey for visibility */
-      padding: 20px 40px;
+      background-color: #f8f8f8; /* Light grey for better logo visibility */
+      padding: 15px 40px;
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     }
 
     .navbar .logo-container {
       display: flex;
       align-items: center;
-      gap: 10px; /* Space between logo and text */
+      gap: 10px; /* Space between logo image and logo name */
     }
 
-    /* Logo and Logo Text 2x */
     .navbar .logo {
-      height: 80px; /* 2x the original size */
+      height: 40px;
       width: auto;
     }
 
     .navbar .logo-name {
-      height: 80px; /* Match logo size */
+      height: 40px;
       width: auto;
     }
 
-    /* Navbar Links 1.5x Size */
     .navbar nav ul {
       list-style: none;
       display: flex;
@@ -60,6 +58,90 @@
 
     .navbar nav ul li a {
       text-decoration: none;
-      color: #a2a2a2; /* Custom text color */
-      font-size: 24px; /* 1.5x original size */
-      f
+      color: #333; /* Dark grey for contrast against light navbar */
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .navbar nav ul li a:hover {
+      color: #f0a500;
+      transform: translateY(-2px);
+    }
+
+    .navbar nav ul li a.active {
+      color: #f0a500;
+      border-bottom: 2px solid #f0a500;
+    }
+
+    /* Main Content */
+    .main-content {
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    /* Footer Styling */
+    .footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+
+    .footer p {
+      margin: 10px 0;
+    }
+
+    .footer u {
+      text-decoration: underline;
+      color: #f0a500;
+    }
+
+    .footer u:hover {
+      color: #ff6600;
+    }
+
+    .separator {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Navbar for Page Links -->
+  <div class="navbar">
+    <!-- Logo container with logo image and logo name -->
+    <div class="logo-container">
+      <img src="Images/Logo.avif" alt="Yorkdale Partners Logo" class="logo">
+      <img src="Images/LogoName.avif" alt="Yorkdale Partners Name" class="logo-name">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Our Firm</a></li>
+        <li><a href="solutions.html">Solutions</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <h1>Welcome to Yorkdale Partners</h1>
+    <p>This is where your main content will go.</p>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <p>&copy; 2024 Yorkdale Partners. All rights reserved.</p>
+    <p>
+      <u>Legal Disclaimer</u> <span class="separator">|</span> <u>Privacy Policy</u>
+    </p>
+  </footer>
+</body>
+</html>

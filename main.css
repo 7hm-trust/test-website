@@ -9,7 +9,7 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
-  padding-top: 100px; /* Space for the fixed navbar */
+  padding-top: 120px; /* Extra space for larger fixed navbar */
 }
 
 /* Navbar Styling */
@@ -17,8 +17,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f8f8f8; /* Light grey background for better visibility */
-  padding: 20px 40px; /* Increased padding */
+  background-color: #f8f8f8; /* Light grey for visibility */
+  padding: 25px 50px; /* Larger padding for bigger navbar */
   position: fixed;
   top: 0;
   left: 0;
@@ -27,36 +27,36 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Logo and Logo Name (2x size) */
+/* Logo and Logo Text */
 .navbar .logo-container {
   display: flex;
   align-items: center;
-  gap: 10px; /* Space between logo and text */
+  gap: 15px; /* Space between logo and logo name */
 }
 
 .navbar .logo {
-  height: 80px; /* 2x size */
+  height: 100px; /* Slightly larger logo */
   width: auto;
 }
 
 .navbar .logo-name {
-  height: 80px; /* Match logo size */
+  height: 100px; /* Match the logo size */
   width: auto;
 }
 
-/* Navbar Links (1.5x size) */
+/* Navbar Links */
 .navbar nav ul {
   list-style: none;
   display: flex;
-  gap: 30px; /* Spacing between links */
+  gap: 40px; /* Increased space between links */
 }
 
 .navbar nav ul li a {
   text-decoration: none;
-  color: #a2a2a2; /* Custom text color */
-  font-size: 24px; /* 1.5x size */
+  color: #a2a2a2; /* Text color */
+  font-size: 24px; /* 1.5x larger text size */
   font-weight: 500;
-  letter-spacing: 0.75px; /* Slight letter spacing */
+  letter-spacing: 0.75px;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -103,4 +103,29 @@ body {
   text-decoration: none;
   color: white;
   font-size: 18px;
+}
+
+/* Responsive Navbar for Mobile View */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .navbar .logo-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar nav ul {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .navbar .logo,
+  .navbar .logo-name {
+    height: 80px; /* Smaller logos for mobile view */
+  }
 }

@@ -9,7 +9,7 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
-  padding-top: 70px; /* Space for the fixed navbar */
+  padding-top: 100px; /* Increased space for the larger navbar */
 }
 
 /* Navbar Styling */
@@ -17,49 +17,51 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #e8e8e8; /* Very light grey for maximum contrast */
-  padding: 15px 40px;
+  background-color: #f8f8f8; /* Light grey background */
+  padding: 20px 40px; /* Increased padding for larger appearance */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Logo Container */
 .navbar .logo-container {
   display: flex;
   align-items: center;
-  gap: 10px; /* Space between logo image and logo name */
+  gap: 20px; /* Space between logo and logo name */
 }
 
 .navbar .logo {
-  height: 40px;
+  height: 80px; /* 2x size */
   width: auto;
 }
 
 .navbar .logo-name {
-  height: 40px;
+  height: 80px; /* Match the logo size */
   width: auto;
 }
 
+/* Navbar Links */
 .navbar nav ul {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 40px; /* Larger gap between links */
 }
 
 .navbar nav ul li a {
   text-decoration: none;
-  color: #333; /* Dark grey for contrast */
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
+  color: #a2a2a2; /* Custom text color */
+  font-size: 24px; /* 1.5x size (16px -> 24px) */
+  font-weight: 600;
+  letter-spacing: 0.75px; /* Slight spacing */
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .navbar nav ul li a:hover {
-  color: #f0a500; /* Highlight color for links on hover */
+  color: #f0a500; /* Hover effect */
   transform: translateY(-2px);
 }
 
@@ -68,30 +70,9 @@ body {
   border-bottom: 2px solid #f0a500;
 }
 
-/* Responsive Navbar for Mobile View */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px 20px;
-  }
-
-  .navbar nav ul {
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 10px;
-  }
-
-  .navbar .logo-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
 /* Main Content */
 .main-content {
-  padding: 20px;
-  margin-top: 30px;
+  padding: 30px;
 }
 
 /* Footer Styling */
